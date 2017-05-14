@@ -48,7 +48,7 @@ class Flack::App
 
   def queue_launch(env, msg, ret)
 
-    dom = msg['domain']
+    dom = msg['domain'] || 'domain0'
     src = msg['tree'] || msg['name']
 
     return respond_bad_request(env, 'missing domain') \
